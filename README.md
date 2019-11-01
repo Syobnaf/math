@@ -1,2 +1,2 @@
-# math
-For all my mathematical explorations
+# Math
+For the purpose of storing scripts exploring various mathematical concepts.
