@@ -1,3 +1,5 @@
+import sys
+
 class BaseConverter:
     def __init__(self, n_str, num_bases):
         self.n_str = n_str
@@ -30,12 +32,14 @@ class BaseConverter:
                 print_str += str(digit)
                 if digit_num != last_idx:
                     print_str += ', '
-                else:
-                    print_str += '\t' + str(digit_sum)
+                #else:
+                #    print_str += '\t' + str(digit_sum)
             print(print_str)
 
 if __name__ == '__main__':
     n_str = input('Input n: ')
-    num_bases = int(input('Input number of bases to compute: '))
+    #num_bases = int(input('Input number of bases to compute: '))
+    num_bases = int(n_str) // 2
+    sys.stdout = open(".\\" + n_str + ".txt", "w")
     bc = BaseConverter(n_str, num_bases)
     bc.displayResults()
